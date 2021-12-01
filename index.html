@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-  Bill
+  <!--Bill
 
   Select Tip %
   5%
@@ -34,11 +31,41 @@
   Total
   / person
 
-  Reset
-  
+  Reset-->
+
+  <div id="main">
+    <div id="container_calculator">
+      <div id="left_display">
+        <div class="w100" id="container_bill">Bill<br />
+          <div id="icon_input">$</div><input type="text" id="input_bill" placeholder="0" />
+        </div>
+        <div class="w100" id="container_select_tip"><span>Select Tip %</span><br />
+          <div class="btn_tip">5%</div>
+          <div class="btn_tip">10%</div>
+          <div class="btn_tip">15%</div>
+          <div class="btn_tip">25%</div>
+          <div class="btn_tip">50%</div>
+          <div class="btn_tip custom">Custom</div>
+        </div>
+        <div class="w100" id="container_num_people">Number of People<br />
+          <div id="icon_input_person"></div><input type="text" id="input_bill" placeholder="0" />
+        </div>
+      </div>
+      <div id="right_display">
+        <div id="container_result">
+          <div class="w50" id="tip"><span class="first_line">Tip Amount</span><br />/ person</div><div class="w50" id="total_tip">$0.00</div>
+          <div class="w50" id="person"><span class="first_line">Total</span><br />/ person</div><div class="w50" id="total_person">$0.00</div>
+        </div>
+        <div id="container_reset">
+          <input type="submit" id="btn_reset" value="RESET"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br />
+    Coded by <strong>Luca Todesco</strong>
   </div>
 </body>
 </html>
