@@ -80,6 +80,7 @@ $(document).ready(function() {
   });
 
   $('#custom').on('change', function() {
+    $('.btn_tip').removeClass('active-btn');
     changeTipCustom = ( $(this).val() != '' ? $(this).val() : 0 );
 
     if( changeTipCustom < 0 ) {
