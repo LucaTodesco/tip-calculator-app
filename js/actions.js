@@ -80,7 +80,6 @@ $(document).ready(function() {
   });
 
   $('#custom').on('change', function() {
-    $('.btn_tip').removeClass('active-btn');
     changeTipCustom = ( $(this).val() != '' ? $(this).val() : 0 );
 
     if( changeTipCustom < 0 ) {
@@ -99,6 +98,12 @@ $(document).ready(function() {
 
     calculate();
   });
+
+  $('#custom').on('keyup', function() {
+    if( $(this).val().length > 0 ) {
+      $('.btn_tip').removeClass('active-btn');
+    }
+  }
 
   $('#btn_reset').on('click', function() {
     if( $(this).hasClass('active-reset') ) {
