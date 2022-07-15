@@ -27,6 +27,7 @@ $(document).ready(function() {
     $('.btn_tip').removeClass('active-btn');
     $(this).addClass('active-btn');
     changeTipPerc = $(this).html();
+    $('#custom').val('');
     calculate();
   });
 
