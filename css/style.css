@@ -57,7 +57,7 @@ body {
 }
 
  #custom:focus {
-   border: 2px solid #5daaa2;
+   border: 2px solid #5daaa2 !important;
  }
 
 #custom::placeholder {

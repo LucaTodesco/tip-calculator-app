@@ -28,6 +28,9 @@ $(document).ready(function() {
     $(this).addClass('active-btn');
     changeTipPerc = $(this).html();
     $('#custom').val('');
+    $('#custom').css('border', '2px solid transparent');
+    $('#error_custom').html('');
+    $('#custom').removeClass('error');
     calculate();
   });
 
@@ -96,12 +99,20 @@ $(document).ready(function() {
       $('#custom').removeClass('error');
     }
 
+    if( changeTipCustom > 100 ) {
+      $('#custom').val('100');
+    }
+
     calculate();
   });
 
   $('#custom').on('keyup', function() {
     if( $(this).val().length > 0 ) {
       $('.btn_tip').removeClass('active-btn');
+      $(this).css('border', '2px solid #5daaa2');
+    }
+    else {
+      $(this).css('border', '2px solid transparent');
     }
   });
 
@@ -116,6 +127,7 @@ $(document).ready(function() {
       $('#custom').val('');
       $('#error_custom').html('');
       $('#custom').removeClass('error');
+      $('#custom').css('border', '2px solid transparent');
 
       $('#input_people').val('');
       $('#error_person').html('');
