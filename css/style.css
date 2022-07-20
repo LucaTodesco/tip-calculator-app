@@ -350,3 +350,8 @@ input::placeholder {
 #container_calculator #right_display #container_reset #btn_reset.active-reset:hover {
     background-color: #9fe8df;
 }
+
+/* TODO - Fare stile mobile */
+@media only screen and (max-width: 730px) {
+
+}
